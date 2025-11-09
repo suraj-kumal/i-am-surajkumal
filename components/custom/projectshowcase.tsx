@@ -107,7 +107,7 @@ const ProjectsShowcase = () => {
                   >
                     <a href={project.url} target="_blank" rel="noreferrer">
                       <ExternalLink className="w-4 h-4" />
-                      Visit Site
+                      Visit
                     </a>
                   </Button>
                   <Button
@@ -118,7 +118,7 @@ const ProjectsShowcase = () => {
                   >
                     <a href={project.github} target="_blank" rel="noreferrer">
                       <Github className="w-4 h-4" />
-                      Source Code
+                      Github
                     </a>
                   </Button>
                 </CardFooter>
