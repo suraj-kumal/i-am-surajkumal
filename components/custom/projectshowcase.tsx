@@ -63,7 +63,7 @@ const ProjectsShowcase = () => {
           variants={titleVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground text-center mb-12 md:mb-16 underline decoration-2 underline-offset-8"
+          className="text-2xl sm:text-4xl md:text-5xl font-black text-foreground text-center mb-12 md:mb-16 underline decoration-2 underline-offset-8"
         >
           What I Have Built
         </motion.h2>
