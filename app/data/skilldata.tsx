@@ -161,6 +161,18 @@ const SkillData = () => {
       classname: "devicon-typescript-plain",
       skill: "Programming Language",
     },
+    {
+      id: 27,
+      tsname: "Dart",
+      classname: "devicon-dart-plain-wordmark",
+      skill: "Programming Language",
+    },
+    {
+      id: 28,
+      tsname: "Flutter",
+      classname: "devicon-flutter-plain",
+      skill: "Frontend Technology",
+    },
   ];
 };
 

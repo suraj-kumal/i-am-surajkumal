@@ -30,6 +30,13 @@ const ProjectData = () => {
     },
     {
       id: 5,
+      title: "Schedule Sensei",
+      url: "https://github.com/suraj-kumal/schedule-sensei-mobile/releases/tag/v1.0.3",
+      desc: "Schedule Sensei is a simple and efficient event calendar app. It allows users to sign up, log in, and easily add, edit, or delete events. The app also sends helpful reminders—including a daily 6 AM summary, a notification 1 hour before an event, and an alert at the event time—making it easy to stay organized.",
+      github: "https://github.com/suraj-kumal/schedule-sensei-mobile",
+    },
+    {
+      id: 6,
       title: "SkyCast",
       url: "https://skycast-red.vercel.app/",
       desc: "SkyCast is a weather application that provides real-time weather updates and a 7-day forecast using the OpenWeatherMap API. It features a sleek, modern UI with dynamic background changes based on weather conditions",
