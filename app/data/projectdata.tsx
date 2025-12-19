@@ -3,7 +3,7 @@ const ProjectData = () => {
     {
       id: 1,
       title: "kamui",
-      url: "https://kamui.onrender.com/",
+      url: "https://kamui-share.onrender.com/",
       desc: "Peer-to-peer file sharing application over local networks. Share files easily with nearby devices.",
       github: "https://github.com/suraj-kumal/kamui",
     },
