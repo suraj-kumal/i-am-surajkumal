@@ -3,14 +3,14 @@ const ProjectData = () => {
     {
       id: 1,
       title: "kamui",
-      url: "https://kamui-share.onrender.com/",
+      url: "https://kamui.onthewifi.com/",
       desc: "Peer-to-peer file sharing application over local networks. Share files easily with nearby devices.",
       github: "https://github.com/suraj-kumal/kamui",
     },
     {
       id: 2,
       title: "Trackit",
-      url: "https://trackyourbusiness.onrender.com/",
+      url: "https://trackit-business.onrender.com/",
       desc: "TrackIt is an intelligent inventory management platform designed to help businesses manage items, track transactions, analyze revenues, and gain insights with powerful analytics and charts. It offers features like secure authentication, customizable dashboards, and up-to-date stock tracking for efficient inventory control.",
       github: "https://github.com/suraj-kumal/trackit",
     },
