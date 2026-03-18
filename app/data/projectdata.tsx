@@ -4,7 +4,7 @@ const ProjectData = () => {
       id: 1,
       title: "kamui",
       url: "https://kamui.onthewifi.com/",
-      desc: "Peer-to-peer file sharing application over local networks. Share files easily with nearby devices.",
+      desc: "Kamui is a browser-based file sharing tool that lets you send files instantly between devices on the same network — no app install, no account, no cloud. Just open the link and share.",
       github: "https://github.com/suraj-kumal/kamui",
     },
     {
