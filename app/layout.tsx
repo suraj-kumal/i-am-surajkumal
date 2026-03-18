@@ -4,10 +4,10 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { libreBaskerville } from "@/app/ui/fonts";
 import type { Metadata } from "next";
 
-const siteUrl = "https://surajkumal.vercel.app";
+const siteUrl = "https://surajkumal.com.np";
 const siteName = "Suraj Kumal - Software Developer";
 const siteDescription =
-  "Software Developer specializing in full-stack web development with expertise in React, Next.js, Node.js, Python, Django, and cloud technologies. Your vision, my code, a digital masterpiece.";
+  "Software Developer specializing in full-stack web development with expertise in Laravel, Next.js, Node.js, Flutter and Django. Your vision, my code, a digital masterpiece.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -86,14 +86,12 @@ export const metadata: Metadata = {
     title: siteName,
     description: siteDescription,
     images: ["/Dx.gif"],
-    creator: "@yourtwitterhandle", 
+    creator: "@yourtwitterhandle",
   },
   alternates: {
     canonical: siteUrl,
   },
-  verification: {
-    
-  },
+  verification: {},
 };
 
 export default function RootLayout({
