@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 const siteUrl = "https://surajkumal.com.np";
 const siteName = "Suraj Kumal - Software Developer";
 const siteDescription =
-  "Software Developer specializing in full-stack web development with expertise in Laravel, Next.js, Node.js, Flutter and Django. Your vision, my code, a digital masterpiece.";
+  "Software Developer specializing in full-stack with expertise in Laravel, Next.js, Node.js, Flutter and Django. Your vision, my code, a digital masterpiece.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
