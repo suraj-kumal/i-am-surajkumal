@@ -14,6 +14,8 @@ export default function Page() {
   const techStackRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const socialContactRef = useRef<HTMLDivElement>(null);
+  const visitorsLoveThisPage = process.env.NEXT_PUBLIC_VISITORS_LOVE_THIS_PAGE;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +32,27 @@ export default function Page() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (sessionStorage.getItem("chine")) return;
+    const trackVisit = async () => {
+      try {
+        await fetch(`${visitorsLoveThisPage}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${key}`,
+            apikey: key!,
+          },
+        });
+
+        sessionStorage.setItem("chine", "true");
+      } catch (err) {
+        console.error("something wrong", err);
+      }
+    };
+    trackVisit();
   }, []);
 
   const scrollToNextSection = () => {
