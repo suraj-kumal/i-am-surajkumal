@@ -1,9 +1,9 @@
 // app/layout.tsx
 import "@/app/ui/global.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { libreBaskerville } from "@/app/ui/fonts";
+import { libreBaskerville, SpaceGrotesk } from "@/app/ui/fonts";
 import type { Metadata } from "next";
-
+import { ModeToggle } from "@/components/ui/modetoggle";
 const siteUrl = "https://surajkumal.com.np";
 const siteName = "Suraj Kumal - Software Developer";
 const siteDescription =
@@ -102,11 +102,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={libreBaskerville.className}
-      suppressHydrationWarning
-    >
+    <html lang="en" className={SpaceGrotesk.className} suppressHydrationWarning>
       <head>
         <link
           rel="stylesheet"
@@ -120,6 +116,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="absolute top-4 right-4 z-50">
+            <ModeToggle />
+          </div>
           {children}
         </ThemeProvider>
       </body>

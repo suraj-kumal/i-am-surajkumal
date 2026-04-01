@@ -81,10 +81,6 @@ export default function Page() {
 
   return (
     <main className="relative">
-      <div className="absolute top-4 right-4 z-50">
-        <ModeToggle />
-      </div>
-
       {!hideButton && (
         <div className="fixed bottom-8 right-8 z-40">
           <MyButton onClick={scrollToNextSection} />

@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { motion, useInView } from "framer-motion";
-
+import Link from "next/link";
 const SocialContact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -137,8 +137,17 @@ const SocialContact = () => {
               </motion.h4>
             </motion.div>
           </div>
+          <div className="w-full text-center mt-16">
+            <Link
+              href="/blogs"
+              className="underline text-xl text-gray-400 hover:text-primary"
+            >
+              {"print(readMyBlogs)"}
+            </Link>
+          </div>
         </motion.div>
       </div>
+
       <div className="flex justify-end mr-3">
         <div className="opacity-0 hover:opacity-100 transition-opacity duration-900">
           <p className="">Note : Deployed on 11/11/2025</p>
