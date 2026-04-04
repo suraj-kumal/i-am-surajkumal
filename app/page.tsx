@@ -81,7 +81,7 @@ export default function Page() {
 
   return (
     <main className="relative">
-      <ScrollSound />
+      {/*<ScrollSound />*/}
       {!hideButton && (
         <div className="fixed bottom-8 right-8 z-40">
           <MyButton onClick={scrollToNextSection} />
