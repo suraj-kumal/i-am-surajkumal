@@ -100,7 +100,7 @@ export default async function Page({
         </h1>
         <img
           src={content.cover_image}
-          className="w-full h-32 rounded-md my-4"
+          className="w-full rounded-md my-4"
           alt={content.title}
         />
         <div

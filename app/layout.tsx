@@ -1,7 +1,7 @@
 // app/layout.tsx
 import "@/app/ui/global.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { libreBaskerville, SpaceGrotesk } from "@/app/ui/fonts";
+import { libreBaskerville, SpaceGrotesk, RobotoMono } from "@/app/ui/fonts";
 import type { Metadata } from "next";
 import { ModeToggle } from "@/components/ui/modetoggle";
 const siteUrl = "https://surajkumal.com.np";
@@ -102,7 +102,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={SpaceGrotesk.className} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${SpaceGrotesk.className} ${RobotoMono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <link
           rel="stylesheet"

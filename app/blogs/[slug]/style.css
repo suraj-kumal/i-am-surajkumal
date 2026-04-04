@@ -1,18 +1,23 @@
 div.custom-content h2 {
-    font-size: 28px;
-    font-weight: bold;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .custom-content {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .custom-content pre {
-    background-color: #18181b;
-    color: #f4f4f5;
-    padding: 1rem;
-    font-family: monospace;
-    font-size: 0.875rem;
-    overflow: auto;
-    border-radius: 0;
+  background-color: #18181b;
+  color: #f4f4f5;
+  padding: 1rem;
+  font-family: var(--font-roboto-mono);
+
+  font-size: 0.875rem;
+  overflow: auto;
+  border-radius: 0;
+  margin-bottom: 1rem;
+}
+.custom-content p {
+  margin-bottom: 1rem;
 }

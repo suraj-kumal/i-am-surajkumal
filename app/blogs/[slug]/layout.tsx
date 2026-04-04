@@ -4,7 +4,6 @@ import { Metadata, ResolvingMetadata } from "next";
 
 const siteUrl = "https://surajkumal.com.np";
 
-// Incremental Static Regeneration - revalidate every 10 minutes (600 seconds)
 export const revalidate = 600;
 
 export async function generateMetadata(
@@ -26,16 +25,14 @@ export async function generateMetadata(
 
   return {
     title: content.title,
-    description: content.description || content.excerpt,
-    keywords: content.keywords
-      ? content.keywords.split(",").map((k: string) => k.trim())
-      : undefined,
+    description: content.seo_description,
+    keywords: content.seo_keywords,
     authors: [{ name: "Suraj Kumal" }, ...authors],
     creator: "Suraj Kumal",
     openGraph: {
       type: "article",
       title: content.title,
-      description: content.description || content.excerpt,
+      description: content.seo_description,
       url: blogUrl,
       siteName: "Suraj Kumal",
       images: [

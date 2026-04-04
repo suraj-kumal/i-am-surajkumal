@@ -9,7 +9,6 @@ export default function ScrollSound() {
     audioRef.current = new Audio("/ratchet.mp3");
     audioRef.current.preload = "auto";
 
-    // Unlock audio on first click/tap
     const unlockAudio = () => {
       if (audioRef.current && !unlocked) {
         audioRef.current
@@ -19,9 +18,7 @@ export default function ScrollSound() {
             audioRef.current!.currentTime = 0;
             setUnlocked(true);
           })
-          .catch(() => {
-            // still locked
-          });
+          .catch(() => {});
       }
     };
 
@@ -31,16 +28,31 @@ export default function ScrollSound() {
     const handleWheel = (event: WheelEvent) => {
       if (!audioRef.current || !unlocked) return;
 
-      const speed = Math.min(Math.max(Math.abs(event.deltaY) / 100, 0.5), 3);
+      const delta = Math.abs(event.deltaY);
+
+      // 🔑 MUCH bigger range → makes normal scroll small
+      const normalized = Math.min(delta / 800, 1);
+
+      // Gentle curve
+      const eased = Math.pow(normalized, 1.3);
+
+      // 🎯 Bias toward slow speeds
+      let speed = 0.4 + eased * 2.6;
+
+      // 🧠 Force normal scroll into 0.4–0.5 zone
+      if (delta < 80) {
+        speed = 0.45;
+      }
+
       audioRef.current.playbackRate = speed;
       audioRef.current.currentTime = 0;
       audioRef.current.play().catch(() => {});
     };
 
     window.addEventListener("wheel", handleWheel);
+
     return () => {
       window.removeEventListener("wheel", handleWheel);
-      window.removeEventListener("click", unlockAudio);
       window.removeEventListener("keydown", unlockAudio);
     };
   }, [unlocked]);
