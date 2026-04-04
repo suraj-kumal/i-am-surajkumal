@@ -1,4 +1,78 @@
 import { Toaster } from "@/components/ui/sonner";
+import { getBlogContent } from "@/lib/content";
+import { Metadata, ResolvingMetadata } from "next";
+
+const siteUrl = "https://surajkumal.com.np";
+
+// Incremental Static Regeneration - revalidate every 10 minutes (600 seconds)
+export const revalidate = 600;
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> },
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const { slug } = await params;
+  const content = await getBlogContent(slug);
+
+  if (!content) {
+    return {
+      title: "Blog Not Found",
+      description: "The blog post you're looking for doesn't exist.",
+    };
+  }
+
+  const blogUrl = `${siteUrl}/blogs/${slug}`;
+  const authors = (await parent).authors || [];
+
+  return {
+    title: content.title,
+    description: content.description || content.excerpt,
+    keywords: content.keywords
+      ? content.keywords.split(",").map((k: string) => k.trim())
+      : undefined,
+    authors: [{ name: "Suraj Kumal" }, ...authors],
+    creator: "Suraj Kumal",
+    openGraph: {
+      type: "article",
+      title: content.title,
+      description: content.description || content.excerpt,
+      url: blogUrl,
+      siteName: "Suraj Kumal",
+      images: [
+        {
+          url: content.cover_image,
+          width: 1200,
+          height: 630,
+          alt: content.title,
+        },
+      ],
+      publishedTime: content.created_at,
+      modifiedTime: content.updated_at,
+      authors: ["Suraj Kumal"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content.title,
+      description: content.description || content.excerpt,
+      images: [content.cover_image],
+    },
+    alternates: {
+      canonical: blogUrl,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+      },
+    },
+  };
+}
+
 export default function ContentLayout({
   children,
 }: {

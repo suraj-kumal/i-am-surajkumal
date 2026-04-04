@@ -8,6 +8,65 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import type { Metadata } from "next";
+
+const siteUrl = "https://surajkumal.com.np";
+const blogsUrl = `${siteUrl}/blogs`;
+
+export const metadata: Metadata = {
+  title: "Blog | Suraj Kumal",
+  description:
+    "Read articles about web development, full-stack engineering, and software best practices. Written by Suraj Kumal.",
+  keywords: [
+    "blog",
+    "web development",
+    "full-stack",
+    "Next.js",
+    "React",
+    "Node.js",
+    "Python",
+    "tutorials",
+  ],
+  alternates: {
+    canonical: blogsUrl,
+  },
+  openGraph: {
+    type: "website",
+    title: "Blog | Suraj Kumal",
+    description:
+      "Read articles about web development, full-stack engineering, and software best practices.",
+    url: blogsUrl,
+    siteName: "Suraj Kumal",
+    images: [
+      {
+        url: `${siteUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "Suraj Kumal - Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Suraj Kumal",
+    description:
+      "Read articles about web development, full-stack engineering, and software best practices.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+};
+
+// Incremental Static Regeneration - revalidate every 10 minutes (600 seconds)
+export const revalidate = 600;
 
 export default async function BlogsPage() {
   const blogs = await getPublishedBlogs();
@@ -73,6 +132,11 @@ export default async function BlogsPage() {
               </Card>
             </Link>
           ))}
+        </div>
+        <div className="w-full flex justify-end">
+          <Button variant={"outline"} className="mt-1 mb-1">
+            <Link href="/">{"print(back_to_portfolio)"}</Link>
+          </Button>
         </div>
       </div>
     </div>

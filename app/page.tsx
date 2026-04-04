@@ -7,7 +7,7 @@ import UnderTheHood from "@/components/custom/underthehood";
 import SocialContact from "@/components/custom/socialcontact";
 import ProjectsShowcase from "@/components/custom/projectshowcase";
 import MyButton from "@/components/custom/MyButton";
-
+import ScrollSound from "@/components/ScrollSound";
 export default function Page() {
   const [hideButton, setHideButton] = useState(false);
   const meRef = useRef<HTMLDivElement>(null);
@@ -81,6 +81,7 @@ export default function Page() {
 
   return (
     <main className="relative">
+      <ScrollSound />
       {!hideButton && (
         <div className="fixed bottom-8 right-8 z-40">
           <MyButton onClick={scrollToNextSection} />

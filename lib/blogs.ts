@@ -14,3 +14,17 @@ export async function getPublishedBlogs() {
 
   return data ?? [];
 }
+
+export async function getPublishedBlogSlugs() {
+  const { data, error } = await supabase
+    .from("blogs")
+    .select("slug")
+    .eq("published", true);
+
+  if (error) {
+    console.log(error);
+    throw error;
+  }
+
+  return data ?? [];
+}

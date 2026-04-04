@@ -5,7 +5,7 @@ import { libreBaskerville, SpaceGrotesk } from "@/app/ui/fonts";
 import type { Metadata } from "next";
 import { ModeToggle } from "@/components/ui/modetoggle";
 const siteUrl = "https://surajkumal.com.np";
-const siteName = "Suraj Kumal - Software Developer";
+const siteName = "Suraj Kumal – Software Developer | T-shaped Engineer";
 const siteDescription =
   "Software Developer specializing in full-stack with expertise in Laravel, Next.js, Node.js, Flutter and Django. Your vision, my code, a digital masterpiece.";
 

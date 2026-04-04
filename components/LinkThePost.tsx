@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ThumbsUp, ThumbsDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -18,7 +18,7 @@ export default function LikeThePost({ id }: Props) {
 
   const storageKey = `post-like-${id}`;
   const sentKey = `post-like-${id}-sent`;
-
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   // ✅ Load previous state
   useEffect(() => {
     const stored = localStorage.getItem(storageKey);
@@ -26,6 +26,13 @@ export default function LikeThePost({ id }: Props) {
       setValue(stored);
     }
   }, [storageKey]);
+
+  useEffect(() => {
+    const audio = new Audio("/notification.mp3");
+    audio.preload = "auto"; // 🔥 preload
+    audio.load(); // force load
+    audioRef.current = audio;
+  }, []);
 
   // ✅ Save selection
   useEffect(() => {
@@ -66,6 +73,15 @@ export default function LikeThePost({ id }: Props) {
     trackFeedback();
   }, [value, id, readerLoveThisPost, key, sentKey]);
 
+  const playSound = () => {
+    if (!audioRef.current) return;
+
+    audioRef.current.currentTime = 0;
+    audioRef.current.play().catch(() => {
+      // silently ignore autoplay/block errors
+    });
+  };
+
   return (
     <div className="flex flex-col items-center gap-4 p-4 border bg-card rounded-2xl w-full mt-16 mb-16">
       <p className="text-sm font-medium">Do you like the post?</p>
@@ -76,9 +92,11 @@ export default function LikeThePost({ id }: Props) {
           size="icon"
           onClick={() => {
             setValue("up");
+
             toast.success("Thanks for your feedback!", {
               position: "top-center",
             });
+            playSound();
           }}
           className={cn(
             value === "up" && "bg-green-500 hover:bg-green-600 text-white",
@@ -92,9 +110,11 @@ export default function LikeThePost({ id }: Props) {
           size="icon"
           onClick={() => {
             setValue("down");
+
             toast.success("Thanks for your feedback!", {
               position: "top-center",
             });
+            playSound();
           }}
           className={cn(
             value === "down" && "bg-red-500 hover:bg-red-600 text-white",

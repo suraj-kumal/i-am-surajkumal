@@ -4,7 +4,9 @@ import React, { useRef } from "react";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { motion, useInView } from "framer-motion";
-import Link from "next/link";
+// import Link from "next/link";
+// import { Button } from "../ui/button";
+import CodeButton from "../CodeButton";
 const SocialContact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -137,14 +139,16 @@ const SocialContact = () => {
               </motion.h4>
             </motion.div>
           </div>
-          <div className="w-full text-center mt-16">
-            <Link
-              href="/blogs"
-              className="underline text-xl text-gray-400 hover:text-primary"
-            >
-              {"print(readMyBlogs)"}
-            </Link>
-          </div>
+          <motion.div
+            variants={sectionVariants}
+            className="w-full text-center mt-16"
+          >
+            {/*<Button variant={"outline"}>
+              <Link href="/blogs">{"print(read_blogs)"}</Link>
+            </Button>*/}
+
+            <CodeButton href="/blogs" label="read_blogs" />
+          </motion.div>
         </motion.div>
       </div>
 
