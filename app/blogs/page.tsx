@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   description:
     "Read articles about web development, full-stack engineering, and software best practices. Written by Suraj Kumal.",
   keywords: [
-    "blog",
     "suraj kumal",
+    "blog",
     "web development",
     "full-stack",
     "Next.js",
