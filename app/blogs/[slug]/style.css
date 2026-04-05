@@ -1,23 +1,74 @@
-div.custom-content h2 {
-  font-size: 28px;
-  font-weight: bold;
-}
-
 .custom-content {
-  font-size: 14px;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-.custom-content pre {
-  background-color: #18181b;
-  color: #f4f4f5;
-  padding: 1rem;
-  font-family: var(--font-roboto-mono);
-
-  font-size: 0.875rem;
-  overflow: auto;
-  border-radius: 0;
-  margin-bottom: 1rem;
+/* Headings */
+div.custom-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
 }
+
+div.custom-content h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+div.custom-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+div.custom-content h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
 .custom-content p {
-  margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+}
+
+/* Strong/Bold text */
+.custom-content strong {
+    font-weight: 700;
+}
+
+/* Code blocks */
+.custom-content pre {
+    background-color: #18181b;
+    color: #f4f4f5;
+    padding: 1.25rem;
+    font-family: var(--font-roboto-mono);
+    font-size: 0.875rem;
+    overflow: auto;
+    border-radius: 0.5rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.custom-content code {
+    background-color: #f4f4f5;
+    color: #18181b;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: var(--font-roboto-mono);
+    font-size: 0.9em;
+}
+
+.custom-content pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
 }

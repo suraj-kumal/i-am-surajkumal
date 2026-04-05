@@ -94,7 +94,7 @@ export default async function Page({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="max-w-full sm:max-w-[90vw] md:max-w-[70vw] lg:max-w-[55vw] mx-auto px-4 mt-20">
+      <div className="max-w-[90vw] md:max-w-[70vw] lg:max-w-[55vw] mx-auto px-4 mt-20">
         <h1 className="m-4 text-2xl sm:text-3xl md:text-4xl font-bold text-center">
           {content.title}
         </h1>
