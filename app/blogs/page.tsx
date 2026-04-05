@@ -94,7 +94,7 @@ export default async function BlogsPage() {
                 "
               >
                 {/* LEFT IMAGE */}
-                <div className="w-44 h-[9rem] md:h-[8rem] flex-shrink-0 overflow-hidden">
+                <div className="w-44 h-[11rem] md:h-[8rem] flex-shrink-0 overflow-hidden">
                   <img
                     src={blog.cover_image}
                     alt={blog.title}
