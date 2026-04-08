@@ -24,14 +24,14 @@ export async function generateMetadata(
   const authors = (await parent).authors || [];
 
   return {
-    title: content.title,
+    title: content.seo_title,
     description: content.seo_description,
     keywords: content.seo_keywords,
     authors: [{ name: "Suraj Kumal" }, ...authors],
     creator: "Suraj Kumal",
     openGraph: {
       type: "article",
-      title: content.title,
+      title: content.seo_title,
       description: content.seo_description,
       url: blogUrl,
       siteName: "Suraj Kumal",
@@ -49,7 +49,7 @@ export async function generateMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title: content.title,
+      title: content.seo_title,
       description: content.description || content.excerpt,
       images: [content.cover_image],
     },
