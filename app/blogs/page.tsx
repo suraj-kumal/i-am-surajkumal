@@ -14,9 +14,9 @@ const siteUrl = "https://surajkumal.com.np";
 const blogsUrl = `${siteUrl}/blogs`;
 
 export const metadata: Metadata = {
-  title: "Blog | Suraj Kumal",
+  title: "Inside the Mind of a Software Developer | Suraj Kumal",
   description:
-    "Read articles about web development, full-stack engineering, and software best practices. Written by Suraj Kumal.",
+    "Read articles about web development, full-stack engineering, cybersecurity, and software best practices. Written by Suraj Kumal.",
   keywords: [
     "suraj kumal",
     "blog",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Blog | Suraj Kumal",
+    title: "Inside the Mind of a Software Developer | Suraj Kumal",
     description:
-      "Read articles about web development, full-stack engineering, and software best practices.",
+      "Read articles about web development, full-stack engineering, cybersecurity, and software best practices. Written by Suraj Kumal.",
     url: blogsUrl,
     siteName: "Suraj Kumal",
     images: [
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog | Suraj Kumal",
+    title: "Inside the Mind of a Software Developer | Suraj Kumal",
     description:
-      "Read articles about web development, full-stack engineering, and software best practices.",
+      "Read articles about web development, full-stack engineering, cybersecurity, and software best practices. Written by Suraj Kumal.",
   },
   robots: {
     index: true,
