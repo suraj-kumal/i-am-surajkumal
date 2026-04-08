@@ -1,4 +1,3 @@
-// app/layout.tsx
 import "@/app/ui/global.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { libreBaskerville, SpaceGrotesk, RobotoMono } from "@/app/ui/fonts";
