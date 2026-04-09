@@ -13,7 +13,6 @@ const siteUrl = "https://surajkumal.com.np";
 // Incremental Static Regeneration - revalidate every 10 minutes (600 seconds)
 export const revalidate = 600;
 
-// Generate static params for all published blogs
 export async function generateStaticParams() {
   const slugs = await getPublishedBlogSlugs();
   return slugs.map((blog) => ({
