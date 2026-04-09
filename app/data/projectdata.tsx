@@ -11,7 +11,7 @@ const ProjectData = () => {
       id: 2,
       title: "Trackit",
       url: "https://trackit-business.onrender.com/",
-      desc: "TrackIt is an intelligent inventory management platform designed to help businesses manage items, track transactions, analyze revenues, and gain insights with powerful analytics and charts. It offers features like secure authentication, customizable dashboards, and up-to-date stock tracking for efficient inventory control.",
+      desc: "Full-stack financial analytics SaaS trackit-business.onrender.com for inventory and transaction management. Logs daily buy/sell transactions per product and computes revenue, COGS, and net profit with weekly, monthly, and all-time breakdowns. Features price trend visualization, secure authentication, andcustomizable dashboards. Dockerized and deployed on Render with PostgreSQL",
       github: "https://github.com/suraj-kumal/trackit",
     },
     {
