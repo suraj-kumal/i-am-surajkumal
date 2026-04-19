@@ -5,7 +5,7 @@ export async function getBlogContent(slug: string) {
     .from("blogs")
     .select("*")
     .eq("slug", slug)
-    .maybeSingle(); // <-- allows 0 rows
+    .maybeSingle(); //  allows 0 rows
 
   if (error) {
     console.log(error);
