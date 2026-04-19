@@ -5,10 +5,10 @@ const BASE_URL = "https://surajkumal.com.np";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   try {
-    // Fetch all published blogs
+    
     const blogs = await getPublishedBlogs();
 
-    // Main pages
+   
     const mainPages: MetadataRoute.Sitemap = [
       {
         url: BASE_URL,
@@ -24,7 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       },
     ];
 
-    // Blog pages
+    
     const blogPages: MetadataRoute.Sitemap = blogs.map((blog: any) => ({
       url: `${BASE_URL}/blogs/${blog.slug}`,
       lastModified: new Date(blog.updated_at || blog.created_at),
@@ -35,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return [...mainPages, ...blogPages];
   } catch (error) {
     console.error("Error generating sitemap:", error);
-    // Return at least the main pages if there's an error
+    
     return [
       {
         url: BASE_URL,
