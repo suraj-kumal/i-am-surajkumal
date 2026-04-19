@@ -36,6 +36,7 @@ div.custom-content h5 {
 .custom-content p {
     margin-bottom: 0.5rem;
     line-height: 1.8;
+    font-size: 14px;
 }
 
 /* Strong/Bold text */
