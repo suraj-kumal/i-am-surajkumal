@@ -70,7 +70,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Incremental Static Regeneration - revalidate every 10 minutes which is 600 sec
 export const revalidate = 600;
 
 export default async function BlogsPage() {
