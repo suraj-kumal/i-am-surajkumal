@@ -38,7 +38,11 @@ div.custom-content h5 {
     line-height: 1.8;
     font-size: 16px;
 }
-
+.custom-content span {
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+    font-size: 16px;
+}
 /* Strong/Bold text */
 .custom-content strong {
     font-weight: 700;
