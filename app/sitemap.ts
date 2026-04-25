@@ -29,7 +29,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${BASE_URL}/blogs/${blog.slug}`,
       lastModified: new Date(blog.updated_at || blog.created_at),
       changeFrequency: "monthly" as const,
-      priority: 0.8,
+      priority: 0.9,
     }));
 
     return [...mainPages, ...blogPages];
