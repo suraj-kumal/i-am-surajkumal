@@ -39,7 +39,7 @@ export async function generateMetadata(
         {
           url: content.cover_image,
           width: 1200,
-          height: 620,
+          height: 630,
           alt: content.title,
         },
       ],
