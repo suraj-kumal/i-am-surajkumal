@@ -6,6 +6,8 @@ const siteUrl = "https://surajkumal.com.np";
 
 export const revalidate = 600;
 
+
+//always upload 1200x630 sized image
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
   parent: ResolvingMetadata,
