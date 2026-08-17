@@ -29,7 +29,7 @@ export default function CodeButton({ href, label }: CodeButtonProps) {
 
       <Button asChild variant="outline" className="mt-1 mb-1">
         <Link href={href} onClick={playSound}>
-          {`print('${label}')`}
+          {`print(${label})`}
         </Link>
       </Button>
     </>
