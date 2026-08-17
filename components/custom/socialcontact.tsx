@@ -94,7 +94,7 @@ const SocialContact = () => {
                     label: "Facebook",
                   },
                   {
-                    href: "https://www.instagram.com/_surajkumal_/",
+                    href: "https://www.instagram.com/_surajkumal",
                     Icon: FaInstagram,
                     label: "Instagram",
                   },
