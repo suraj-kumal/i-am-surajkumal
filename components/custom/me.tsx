@@ -16,7 +16,7 @@ const Me = () => {
     }
 
     let startTime = performance.now();
-    const duration = 2000;
+    const duration = 1000;
     const totalIterations = originalText.length;
 
     const animate = (currentTime: number) => {
