@@ -1,13 +1,20 @@
-import { Weight } from "lucide-react";
 import { Libre_Baskerville } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
+import { Mozilla_Text } from "next/font/google";
 export const libreBaskerville = Libre_Baskerville({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
+});
+
+export const MozillaText = Mozilla_Text({
+  subsets: ["latin"],
+  variable: "--font-mozilla-text",
+  display: "swap",
+  fallback: ["Space Grotesk", "sans-serif"],
 });
 
 export const SpaceGrotesk = Space_Grotesk({
