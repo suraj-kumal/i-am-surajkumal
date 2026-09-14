@@ -9,9 +9,9 @@ import {
 import type { Metadata } from "next";
 import { ModeToggle } from "@/components/ui/modetoggle";
 const siteUrl = "https://surajkumal.com.np";
-const siteName = "Suraj Kumal – Software Developer | T-shaped Engineer";
+const siteName = "Suraj Kumal | T-shaped Engineer";
 const siteDescription =
-  "Software Developer specializing in full-stack with expertise in Laravel, Next.js, Node.js, Flutter and Django. Your vision, my code, a digital masterpiece.";
+  "Software Engineer specializing in full-stack with expertise in Laravel, Next.js, Node.js, Flutter and Django. Your vision, my code, a digital masterpiece.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
