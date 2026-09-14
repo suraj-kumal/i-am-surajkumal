@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Me = () => {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const originalText = "Software Developer";
+  const originalText = "Software Engineer";
   const textRef = useRef<HTMLHeadingElement>(null);
   const animationFrameRef = useRef<number | null>(null);
 
@@ -16,7 +16,7 @@ const Me = () => {
     }
 
     let startTime = performance.now();
-    const duration = 1000;
+    const duration = 1500;
     const totalIterations = originalText.length;
 
     const animate = (currentTime: number) => {
