@@ -45,7 +45,14 @@ const ProjectData = () => {
       github: "https://github.com/suraj-kumal/schedule-sensei-mobile",
     },
     {
-      id: 7,
+  id: 7, // use the next free id in your list
+  title: "Hidden Beans",
+  url: "https://hiddenbeans.is-great.net",
+  desc: "A coffee shop directory with a built-in admin panel, all in a single PHP file. It has a custom router, per-shop SEO pages and SQLite storage, with no framework.",
+  github: "https://github.com/suraj-kumal/coffee",
+},
+    {
+      id: 8,
       title: "SkyCast",
       url: "https://skycast-red.vercel.app/",
       desc: "SkyCast is a weather application that provides real-time weather updates and a 7-day forecast using the OpenWeatherMap API. It features a sleek, modern UI with dynamic background changes based on weather conditions",
