@@ -19,7 +19,7 @@ const ProjectData = () => {
     {
       id: 3,
       title: "Trackit",
-      url: "https://trackit-business.onrender.com/",
+      url: "https://where-stock.onrender.com/",
       desc: "Full-stack financial analytics SaaS trackit-business.onrender.com for inventory and transaction management. Logs daily buy/sell transactions per product and computes revenue, COGS, and net profit with weekly, monthly, and all-time breakdowns. Features price trend visualization, secure authentication, andcustomizable dashboards. Dockerized and deployed on Render with PostgreSQL",
       github: "https://github.com/suraj-kumal/trackit",
     },
