@@ -20,7 +20,7 @@ const ProjectData = () => {
       id: 3,
       title: "WhereStock",
       url: "https://where-stock.onrender.com/",
-      desc: "Full-stack financial analytics SaaS trackit-business.onrender.com for inventory and transaction management. Logs daily buy/sell transactions per product and computes revenue, COGS, and net profit with weekly, monthly, and all-time breakdowns. Features price trend visualization, secure authentication, andcustomizable dashboards. Dockerized and deployed on Render with PostgreSQL",
+      desc: "WhereStock is an inventory management and business analytics system designed to simplify stock tracking and business operations. It allows users to manage inventory, record purchases and sales, and automatically calculate available stock. The system provides analytics such as total revenue, net profit, profit margin, and return on investment (ROI). It also includes interactive charts to track sales performance and identify top-performing and slow-moving products. With secure user authentication and individual accounts, WhereStock helps businesses manage inventory efficiently and make data-driven decisions.",
       github: "https://github.com/suraj-kumal/trackit",
     },
     {
